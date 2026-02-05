@@ -32,6 +32,20 @@ entradaDeDados.question('Digite o nome do(a) cliente: ', function(nome){
 
                 entradaDeDados.question('Digite o tempo de parcelamento em meses:', function(meses){
                     let parcelaMeses = meses
+
+                    // validação da entrada de dados 
+                    if (nomeCliente == '' || nomeProduto == '' || valorCompra == '' || taxaJuros == '' || parcelaMeses == ''){
+                        console.log('Erro: Preencha todos os campos antes de continuar')
+
+                    }else if(!isNaN(nomeCliente)){
+                        console.log('Erro: O campo "nome do(a) cliente" não aceita números')
+
+                    }else if(isNaN(valorCompra) || isNaN(taxaJuros) || isNaN(parcelaMeses)){
+                        console.log('Erro: Os campos aceitam somente números')
+
+                    }else if(valorCompra <= 0 || taxaJuros <= 0 || parcelaMeses <= 0){
+                        console.log('Erro: Os campo não aceitam números menores ou iguais que 0 ')
+                    }
                 })
             })
         })
