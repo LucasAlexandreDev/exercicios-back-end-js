@@ -46,7 +46,7 @@ entradaDeDados.question('Digite o nome do(a) cliente: ', function(nome){
                     }else if(valorCompra <= 0 || taxaJuros <= 0 || parcelaMeses <= 0){
                         console.log('Erro: Os campo não aceitam números menores ou iguais que 0 ')
                     
-                    }else{    
+                    }else{
                         taxaJuros = taxaJuros / 100
 
                         let c = valorCompra
@@ -55,6 +55,11 @@ entradaDeDados.question('Digite o nome do(a) cliente: ', function(nome){
 
                         // cálculo do juros compostos | ** = potenciação
                         const montante = c*(1 + i)**n
+
+                        let acrescimo = montante - valorCompra  
+
+                        // estrutura da saída de dados
+                        console.log(`\n******************* Viva Moda *******************\nMuito obrigado por realizar a sua compra conosco Sr(a) ${nomeCliente}.\nA compra do produto ${nomeProduto}, tem um valor de: R$ ${valorCompra}.\nA sua compra será parcelada em ${parcelaMeses} vezes e o Sr(a) pagará: R$ ${montante.toFixed(2)}.\nO acréscimo realizado ao valor de: R$ ${valorCompra} será de R$ ${acrescimo.toFixed(2)}.\n\nMuito obrigado por escolher a Viva Moda.\n*******************************************************`)
                     }
                 })
             })
