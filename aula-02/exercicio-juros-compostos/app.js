@@ -45,6 +45,16 @@ entradaDeDados.question('Digite o nome do(a) cliente: ', function(nome){
 
                     }else if(valorCompra <= 0 || taxaJuros <= 0 || parcelaMeses <= 0){
                         console.log('Erro: Os campo não aceitam números menores ou iguais que 0 ')
+                    
+                    }else{    
+                        taxaJuros = taxaJuros / 100
+
+                        let c = valorCompra
+                        let i = taxaJuros
+                        let n = parcelaMeses
+
+                        // cálculo do juros compostos | ** = potenciação
+                        const montante = c*(1 + i)**n
                     }
                 })
             })
