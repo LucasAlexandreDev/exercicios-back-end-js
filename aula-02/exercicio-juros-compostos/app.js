@@ -30,28 +30,37 @@ entradaDeDados.question('Digite o nome do(a) cliente: ', function(nome){
             entradaDeDados.question('Digite a taxa de juros:', function(juros){
                 let taxaJuros = juros
 
-                entradaDeDados.question('Digite o tempo de parcelamento em meses:', function(meses){
-                    let parcelaMeses = meses
+                entradaDeDados.question('Digite o período do tempo de parcelamento:\n(1) meses\n(2) anos', function(periodo){
+                    let tempo = periodo
+
+                    entradaDeDados.question('Digite o tempo de parcelamento:', function(meses){
+                        let parcela = meses
 
                     // validação da entrada de dados 
-                    if (nomeCliente == '' || nomeProduto == '' || valorCompra == '' || taxaJuros == '' || parcelaMeses == ''){
+                    if (nomeCliente == '' || nomeProduto == '' || valorCompra == '' || taxaJuros == '' || parcela == ''){
                         console.log('Erro: Preencha todos os campos antes de continuar')
 
                     }else if(!isNaN(nomeCliente)){
                         console.log('Erro: O campo "nome do(a) cliente" não aceita números')
 
-                    }else if(isNaN(valorCompra) || isNaN(taxaJuros) || isNaN(parcelaMeses)){
+                    }else if(isNaN(valorCompra) || isNaN(taxaJuros) || isNaN(parcela)){
                         console.log('Erro: Os campos aceitam somente números')
 
-                    }else if(valorCompra <= 0 || taxaJuros <= 0 || parcelaMeses <= 0){
+                    }else if(valorCompra <= 0 || taxaJuros <= 0 || parcela <= 0){
                         console.log('Erro: Os campo não aceitam números menores ou iguais que 0 ')
-                    
+                        
                     }else{
+
+                        if (tempo == 2){
+                            parcela = parcela * 12
+                            taxaJuros = taxaJuros / 12
+                        }
+
                         taxaJuros = taxaJuros / 100
 
                         let c = valorCompra
                         let i = taxaJuros
-                        let n = parcelaMeses
+                        let n = parcela
 
                         // cálculo do juros compostos | ** = potenciação
                         const montante = c*(1 + i)**n
@@ -59,9 +68,10 @@ entradaDeDados.question('Digite o nome do(a) cliente: ', function(nome){
                         let acrescimo = montante - valorCompra  
 
                         // estrutura da saída de dados
-                        console.log(`\n******************* Viva Moda *******************\nMuito obrigado por realizar a sua compra conosco Sr(a) ${nomeCliente}.\nA compra do produto ${nomeProduto}, tem um valor de: R$ ${valorCompra}.\nA sua compra será parcelada em ${parcelaMeses} vezes e o Sr(a) pagará: R$ ${montante.toFixed(2)}.\nO acréscimo realizado ao valor de: R$ ${valorCompra} será de R$ ${acrescimo.toFixed(2)}.\n\nMuito obrigado por escolher a Viva Moda.\n*******************************************************`)
-                    }
-                })
+                        console.log(`\n******************* Viva Moda *******************\nMuito obrigado por realizar a sua compra conosco Sr(a) ${nomeCliente}.\nA compra do produto ${nomeProduto}, tem um valor de: R$ ${valorCompra}.\nA sua compra será parcelada em ${parcela} vezes e o Sr(a) pagará: R$ ${montante.toFixed(2)}.\nO acréscimo realizado ao valor de: R$ ${valorCompra} será de R$ ${acrescimo.toFixed(2)}.\n\nMuito obrigado por escolher a Viva Moda.\n*******************************************************`)
+                        }
+                    })   
+                }) 
             })
         })
     })
