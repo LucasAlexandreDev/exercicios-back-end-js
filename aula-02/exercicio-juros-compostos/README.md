@@ -1,4 +1,4 @@
-![aplicação](image.png)
+![Aplicação em execução](./img/aplicacao-execucao.png)
 
 # 💰 Cálculo de Juros Compostos – Venda Parcelada
 
@@ -9,6 +9,12 @@ Aplicação back-end desenvolvida em **Node.js** para realizar o cálculo de **j
 O projeto **Cálculo de Juros Compostos – Venda Parcelada** foi desenvolvido com o objetivo de praticar conceitos fundamentais de **JavaScript no Back-End**, utilizando o ambiente **Node.js** e entrada de dados via terminal.
 
 A aplicação simula uma venda parcelada de uma empresa fictícia (**Viva Moda**), realizando o cálculo do montante final com base no valor da compra, taxa de juros e período de parcelamento.
+
+## 📄 Exercício Proposto
+
+Você pode acessar o PDF com o exercício proposto clicando no link abaixo:
+
+[Baixar Exercício Proposto (PDF)](./docs/Missao-1-%20Back-End.docx.pdf)
 
 
 ## 🎯 Objetivo
@@ -50,17 +56,16 @@ A aplicação simula uma venda parcelada de uma empresa fictícia (**Viva Moda**
 - Forma de exibição:
   - Exibição de um resumo final da compra no terminal
 
-
-```
 ## 📂 Estrutura do Projeto
 
-📁 EXERCICIOS-BACK-END-JS  
-┣ 📁 aula/02/exercicio-juros-compostos  
- ┣ 🟨 app.js  
- ┗ 📝 README.md  
+📁 exercicio-juros-compostos  
+┣ 📁 docs  
+┃ ┗ 📄 Missao1-Back-End.pdf  
+┣ 📁 img  
+┃ ┗ 🖼️ aplicacao-execucao.png  
+┣ 🟨 app.js  
+┗ 📝 README.md  
 
-
-```
 ## ▶️ Como Executar o Projeto
 
 1.Clone o repositório para sua máquina:
