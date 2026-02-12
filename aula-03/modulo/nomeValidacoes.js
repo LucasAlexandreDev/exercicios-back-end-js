@@ -1,0 +1,29 @@
+ /*************************************************************************** 
+
+* Objetivo: Arquivo responsável pelas funções  de validação de dados textuais da aplicação.
+* Dev: Lucas Alexandre da Silva
+* Data: 11/02/26
+* Versão: 1.0
+
+****************************************************************************/
+
+function validarNome(nomeUsuario){
+    
+    // remove espaços no início e no final
+    let nome = nomeUsuario.trim()
+
+    // cria um padrão (regex) que permite somente letras e espaços no nome
+    const regex = /^[A-Za-zÀ-ÿ\s]+$/
+
+    //  validação de entrada de dados: vazia e caracteres inválidos
+    if (nome == '' || !regex.test(nome)){
+        return false
+
+    }else{
+        return nome
+    }
+}
+
+module.exports = {
+  validarNome
+}
