@@ -1,6 +1,6 @@
  /*************************************************************************** 
 
-* Objetivo: Arquivo responsável pelas funções  de validação de dados textuais da aplicação.
+* Objetivo: Arquivo responsável pelas funções de validação e verificação de dados de entrada da aplicação.
 * Dev: Lucas Alexandre da Silva
 * Data: 11/02/26
 * Versão: 1.0

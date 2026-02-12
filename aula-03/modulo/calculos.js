@@ -1,7 +1,6 @@
 /*************************************************************************** 
 
-* Objetivo: Arquivo responsável pelas funções de calculos escolares
-* Dev: Lucas Alexandre da Silva
+* Objetivo: Arquivo responsável pelas funções de calculos matemáticos 
 * Data: 11/02/26
 * Versão: 1.0
 
