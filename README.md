@@ -18,3 +18,18 @@ como parte do curso Técnico em Desenvolvimento de Sistemas – SENAI.
 cd aula-02
 cd exercicio-juros-compostos
 ```
+### Aula 03
+- **Exercício 01 – Cálculo de Média Escolar**
+  - Cálculo de média ponderada utilizando funções
+  - Modularização do código (separação em arquivos)
+  - Validação de notas (0 a 100)
+  - Validação do nome do aluno
+  - Entrada de dados via terminal com `readline`
+  - Exibição do status: Aprovado, Recuperação ou Reprovado
+
+## 📁 Caminho do arquivo
+
+```
+cd aula-03
+cd exercicio-refactor-media-escolar
+```

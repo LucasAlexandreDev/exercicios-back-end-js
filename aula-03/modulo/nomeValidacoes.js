@@ -7,6 +7,7 @@
 
 ****************************************************************************/
 
+// função que retorna a validação do nome do usuário
 function validarNome(nomeUsuario){
     
     // remove espaços no início e no final
