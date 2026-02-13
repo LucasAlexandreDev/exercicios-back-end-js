@@ -14,7 +14,7 @@ const readline = require('readline')
 const calculos = require('../modulo/calculos')
 
 // import da biblioteca de validações textuais
-const validacao = require('../modulo/nomeValidacoes')
+const validacao = require('../modulo/validacoesDados')
 
 // criando objeto de entrada de dados
 const entradaDeDados = readline.createInterface({
@@ -59,10 +59,10 @@ entradaDeDados.question('Digite o nome do aluno: ', function (nome) {
 
                     // validação para verificar se o cálculo da média e o nome são válidos
                     if(media && nome){
-                        console.log(`----------------------------------\nAluno: ${nome} \nMédia Final: ${media} \nStatus De Aprovação: ${status}\n----------------------------------`)
+                        console.log(`\n************************* BOTETIM ************************\n\nAluno(a): ${nome}\nMédia Final: ${media}\nStatus De Aprovação: ${status}\n\n*************************** - ***************************`)
                         
                     }else{
-                        console.log('ERRO: Não foi possivel processar o calculo de média. Verifique os campos novamente')
+                        console.log('\nERRO: Não foi possivel processar o calculo de média. Verifique os campos novamente')
                         entradaDeDados.close()
                     }
                 })
